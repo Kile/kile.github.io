@@ -101,7 +101,7 @@ body {
 
 .cmd-group {
     cursor: pointer;
-    background-color: #3acbe1;
+    background-color: #3a4ba1;
     border-radius: 10px;
     margin: 20px auto;
     padding: 10px;
@@ -121,13 +121,12 @@ body {
 }
 
 .cmd-group-title:hover {
-    background-color: #27859a;
+    background-color: #273b5a;
     border-radius: 10px;
     text-align: center;
 }
 
 .cmd-group-description {
-    display: none;
     text-align: center;
 }
 
@@ -138,14 +137,12 @@ body {
 .cmd-title {
     /* Keep command containers in a column */
     text-align: center;
-    display: none;
     max-width: fit-content;
 }
 
 .cmd-description {
     /* Keep command containers in a column */
     text-align: left;
-    display: none;
     flex-direction: column;
 }
 
@@ -155,10 +152,14 @@ body {
 
 .discord-formatting {
     /* Discord dark mode background color */
-    background-color: #36393e;
+    background-color: #16191e;
     font-family: whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
     padding: 5px;
-    box-shadow: 0 0 5px white;
+    /*box-shadow: 0 0 5px white;*/
+    border: 2px solid #26292e;
+    border-right: 2px solid #16191e;
+    border-bottom: 2px solid #16191e;
+    border-left: 4px solid #26292e;
 }
 
 /* Add the user image after the text */

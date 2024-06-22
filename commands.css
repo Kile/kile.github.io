@@ -1,0 +1,293 @@
+@keyframes flash {
+	0% {
+		filter: brightness(1.5);
+	}
+
+	100% {
+
+	}
+}
+
+.template {
+	display: none !important;
+}
+
+span {
+	pointer-events: none;
+}
+
+span.susage,
+span.musage {
+	pointer-events: auto;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+input.search {
+	color: inherit;
+	background-color: inherit;
+	border-width: 2px;
+	border-style: solid;
+	font-family: inherit;
+	font-size: 1.4em;
+	padding: 0.4em;
+	border-radius: 4px;
+
+	min-width: 0%;
+	transition: min-width 0.5s;
+}
+
+input.search:hover {
+	min-width: 99%;
+}
+
+.collection.hide {
+	display: none;
+	border: 2px solid red !important;
+}
+
+.command.hide {
+	display: none;
+	border: 2px solid red !important;
+}
+
+.collection {
+	overflow: hidden;
+	max-height: 9em;
+
+	transition: max-height 0.3s;
+	padding: 0px;
+}
+
+.collection .header {
+	position: relative;
+	left: 0px;
+	top: 0px;
+
+	width: 100%;
+	height: 9em;
+
+	padding: 1em;
+	text-align: center;
+}
+
+.collection .header > div {
+	position: relative;
+
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.collection .header > div .title {
+	font-size: 1.4em;
+	margin-bottom: 0.5em;
+
+	transition: font-size 0.4s, filter 0.2s;
+}
+
+.collection .header > div .description {
+	display: none;
+}
+
+.collection .header > div .description.short {
+	display: block;
+}
+
+.collection.open {
+	max-height: 1000vh;
+}
+
+.collection.open .header > div .title {
+	font-size: 2em;
+	transition: font-size 0.2s;
+
+	border-width: 4px;
+	border-style: solid;
+	border-top: none;
+	border-bottom: none;
+
+	border-radius: 0px;
+
+	filter: brightness(0.8);
+}
+
+.collection.open .header > div .description {
+	display: block;
+}
+
+.collection.open .header > div .description.short {
+	display: none;
+}
+
+.collection.open .header {
+	height: auto;
+}
+
+.collection.open .header > div {
+	height: auto;
+
+	transform: translate(-50%, 0);
+}
+
+.collection.open .cmd {
+	opacity: 1;
+
+	transition: opacity 0.5s;
+}
+
+.collection > .isopen {
+	transform: rotate(180deg);
+	position: absolute;
+	right: 1em;
+	top: 1em;
+
+	transition: transform 0.2s;
+}
+
+.collection.open > .isopen {
+	transform: rotate(0deg);	
+}
+
+.command {
+	position: relative;
+	opacity: 0;
+	display: block;
+
+	max-height: 3.4em;
+
+	transition: opacity 0.2s, max-height 1s;
+	overflow: hidden;
+
+	filter: brightness(80%);
+}
+
+.command .premium {
+	display: none;
+
+	vertical-align: middle;
+	color: gold;
+}
+
+.command.premium .premium {
+	display: block;
+}
+
+.command.premium .title, .command.premium-guild .title {
+	color: gold;
+}
+
+.command .premium-guild {
+	display: none;
+
+	vertical-align: middle;
+	color: gold;
+}
+
+.command.premium-guild .premium-guild {
+	display: block;
+}
+
+.command.open {
+	max-height: 300em;
+
+	animation-name: flash;
+	animation-duration: 1s;
+}
+
+.command .isopen {
+	display: inline-block;
+	position: absolute;
+
+	width: 1em;
+	height: 1em;
+
+	top: 1em;
+	left: 95%;
+
+	transition: transform 0.2s;
+	transform: rotate(180deg);
+
+	opacity: 0.3;
+}
+
+.command.open .isopen {
+	transform: rotate(0deg);
+}
+
+.command .inline > div {
+	margin: 6px;
+	margin-left: 0px;
+}
+
+.command .inline > span {
+	margin-left: 6px;
+}
+
+.command > .title-box {
+	position: relative;
+
+	font-size: 1.5em;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+.command .title {
+}
+
+.command.open .title {
+
+}
+
+.hint {
+	position: fixed;
+	border-width: 2px;
+	border-style: solid;
+
+	border-radius: 5px;
+	box-shadow: -5px -5px 5px 1px black;
+
+	z-index: 999;
+	display: none;
+
+	opacity: 0;
+	transition: opacity 0.5s;
+	padding: 0.4em;
+	filter: invert(100%);
+
+	/*transform: translate(-10%, 10%);*/
+}
+
+.hint.visible {
+	display: block;
+
+	opacity: 0.6;
+}
+
+@keyframes loading {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+.loading {
+	margin: 5%;
+	animation-name: loading;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	text-align: center;
+	font-size: 6em;
+}
+
+.loading.done {
+	display: none;
+}

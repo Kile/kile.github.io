@@ -1,0 +1,246 @@
+body {
+	text-align: center;
+	color: white;
+	position: relative;
+	font-family: keifont;
+	padding: 10px;
+}
+
+/* Load font from file */
+@font-face {
+	font-family: keifont;
+	src: url(keifont.woff);
+}
+
+/* Make sure no content overlaps navbar */
+#navbar {
+	z-index: 1;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.box {
+	border-color: white;
+	border-style: solid;
+	width: 80%;
+	/* Center box */
+	margin: 0 auto;
+	text-wrap: break-word;
+}
+
+.slide-section {
+	background-color: #33334B;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	margin: 5% 0;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.content {
+	text-align: center;
+}
+
+.image {
+	text-align: center;
+	width: 100%;
+}
+
+.image img {
+	height: auto;
+	max-width: 100%;
+}
+
+/* The following code allows me to specify if the image will be on the right or left by adding a data-position attribute to the slide-section div */
+.slide-section[data-position="left"] .content {
+	order: 2;
+}
+
+.slide-section[data-position="left"] .image {
+	order: 1;
+}
+
+.slide-section[data-position="right"] .content {
+	order: 1;
+}
+
+.slide-section[data-position="right"] .image {
+	order: 2;
+}
+
+/* This code is run when the display site is lower than 768px (mobile size) to allow a smooth experience on mobile as well*/
+@media (max-width: 768px) {
+	.slide-section {
+		flex-direction: column;
+		/* make top of container 5px higher within the container */
+		padding-top: 5%;
+	}
+
+	.content {
+		text-align: center;
+	}
+
+	.slide-section[data-position="left"] .content,
+	.slide-section[data-position="right"] .content {
+		order: 1;
+	}
+
+	.slide-section[data-position="left"] .image,
+	.slide-section[data-position="right"] .image {
+		order: 2;
+	}
+}
+
+.cmd-group {
+	cursor: pointer;
+	border-radius: 10px;
+	margin: 20px auto;
+	padding: 10px;
+	width: 80%;
+	max-width: 600px;
+
+	filter: brightness(150%);
+}
+
+.cmd-title:hover {
+	width: 100%;
+	max-width: 500px;
+}
+
+.cmd-title {
+
+}
+
+.cmd-group-title:hover {
+}
+
+.cmd-group-description {
+	text-align: center;
+}
+
+.cmd {
+	display: none;
+}
+
+.cmd-title {
+	/* Keep command containers in a column */
+	text-align: center;
+	max-width: fit-content;
+}
+
+.cmd-description {
+	/* Keep command containers in a column */
+	text-align: left;
+	flex-direction: column;
+}
+
+.inline {
+	flex-direction: row;
+}
+
+.discord-formatting {
+	/* Discord dark mode background color */
+	background-color: #16191e;
+	font-family: whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+	padding: 5px;
+	/*box-shadow: 0 0 5px white;*/
+	border: 2px solid #26292e;
+	border-right: 2px solid #16191e;
+	border-bottom: 2px solid #16191e;
+	border-left: 4px solid #26292e;
+}
+
+/* Add the user image after the text */
+.premium-user::after {
+	content: "";
+	display: inline-block;
+	width: 30px; /* Adjust the width as needed */
+	height: 30px; /* Adjust the height as needed */
+	background: url('assets/icons/tier_1.png') no-repeat center center;
+	background-size: cover;
+	margin-left: 5px; /* Adjust the spacing between the image and text */
+	position: relative; /* Position relative to the text */
+	z-index: 1; /* Ensure the icon is above the heading during hover */
+}
+
+/* Add the guild image after the text */
+.premium-guild::after {
+	content: "";
+	display: inline-block;
+	width: 30px; /* Adjust the width as needed */
+	height: 30px; /* Adjust the height as needed */
+	background: url('assets/icons/premium_guild.png') no-repeat center center;
+	background-size: cover;
+	margin-left: 5px; /* Adjust the spacing between the image and text */
+	position: relative; /* Position relative to the text */
+	z-index: 1; /* Ensure the icon is above the heading during hover */
+}
+
+/* Set the padding to 5px if the cmd class display property is not none */
+.cmd:not([style*="display:none"]) {
+	background-color: #33334B;
+	border-radius: 10px;
+	margin: 5%;
+	padding: 5px;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+#count {
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+#highlight {
+	color: #3acbe1;
+}
+
+/* Add rounded background to buttons and hover effect and remove blue highlight and seperate them */
+#buttons a {
+	background-color: #3acbe1;
+	border-radius: 10px;
+	color: whitesmoke;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+}
+#buttons a img {
+	width: 25px;
+}
+
+#buttons a:hover {
+	background-color: #27859a;
+	color: whitesmoke;
+}
+
+#navbar {
+	height: 60px;
+	/* Adjust width to fit screen */
+	width: 100%;
+	/* Set navbar to top of screen */
+	position: fixed;
+	top: 0;
+	/* Set navbar to left of screen */
+	left: 0;
+	/* Set navbar to right of screen */
+	right: 0;
+}
+
+.navbar-nav {
+	background-color: #343a40;
+	border-radius: 0 0 10px 10px;
+}

@@ -24,14 +24,13 @@
 	<script src="jskit/moonsole.js"></script>
 	<script src="jskit/qevent.js"></script>
 	<script src="jskit/klaws.js"></script>
-	<script src="commands.js"></script>
 
-	<link rel="stylesheet" href="style.new.css" />
+	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="color.css" />
-	<link rel="stylesheet" href="commands.css" />
+	<link rel="stylesheet" href="palette.css" />
 	<link rel="stylesheet" href="commands.768px.css" media="(max-width: 768px)"/>
 </head>
-<body class="background-4">
+<body>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark" id='navbar'>
 		<!-- Brand -->
 		<a class="navbar-brand" href="./index.html">
@@ -69,61 +68,23 @@
 	<br />
 	<br />
 	<br />
-	<h1>Commands</h1>
-	<input class="search border-3" placeholder="Search"></input>
-	<!--
-		This is copied over for each collection
-		(see ./commands.js)
-	-->
-	<div class="collection template cmd-group background-4 color-3">
-		<!-- Removed because it's covered by the title's border -->
-		<!--<div class="isopen">V</div>-->
-		<div class="header">
-			<div>
-				<div class="title cmd-group-title">$TITLE</div>
-				<div class="description short cmd-group-description">$DESCRIPTION</div>
-				<div class="description cmd-group-description">$DESCRIPTION</div>
-			</div>
-		</div>
-		<div class="commands">
-			<!--
-				This is copied over for each command within this collection
-				(see ./commands.js)
-			-->
-			<div class="command template cmd">
-				<div class="isopen">V</div>
-				<div class="title-box border-3"><span class="title">$TITLE</span></div>
-				<div class="premium premium-user">
-					<br /><span>Premium</span>
-				</div>
-				<div class="premium-guild">
-					<br /><span>Premium Guild</span>
-				</div>
-				<br />
-				<div class="description cmd-description">$DESCRIPTION</div>
-				<div class="inline">
-					<div>Usage</div>
-					<span class="susage discord-formatting">$SUSAGE</span>
-				</div>
-				<div class="inline">
-					<div>Usage/Classic</div>
-					<span class="musage discord-formatting">$MUSAGE</span>
-				</div>
-				<br />
-				<span>Aliases:</span>
-				<span class="aliases">$ALIASES</span>
-			</div>
-		</div>
-	</div>
-	<div class="hint border-3 background-1">
-		
-	</div><br />
-	<div class="loading">⌛</div>
+	<br />
+	<div class="background background-1"></div>
+	<div class="background background-2"></div>
+	<div class="background background-3"></div>
+	<div class="background background-4"></div>
+	<div class="background background-5"></div>
 
-        <div id='pdcl'>
-            <div id="dcl" style="position:absolute; right:50px; bottom:10px;"><a href='./disclaimers.html'
-                    id='dcl'>Disclaimer</a>
-            </div>
-        </div>
+	<div class="color color-1">Text Color</div>
+	<div class="color color-2">Text Color</div>
+	<div class="color color-3">Text Color</div>
+	<div class="color color-4">Text Color</div>
+	<div class="color color-5">Text Color</div>
+
+	<div class="bord border-1"></div>
+	<div class="bord border-2"></div>
+	<div class="bord border-3"></div>
+	<div class="bord border-4"></div>
+	<div class="bord border-5"></div>
 </body>
 </html>

@@ -28,6 +28,9 @@
   </a>
 </p>
 
+## Note
+Commands page redesign by [Miko0000](https://github.com/Miko0000)
+
 ## Information
 
 https://killua.dev/ was originally made by [WhoAmI1000](https://github.com/WhoAmI1000) (Discord: `WhoAmI#0001`) but has had a major rewrite in 2023. It aims to give information

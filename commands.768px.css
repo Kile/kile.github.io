@@ -1,0 +1,12 @@
+/*
+	This file only loads when the screen is less then 768px long
+	(mobile)
+*/
+
+html {
+	font-size: 0.8em;
+}
+
+.collection {
+	width: 95vw;
+}
